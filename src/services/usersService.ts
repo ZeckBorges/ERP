@@ -1,9 +1,10 @@
 // src/services/usuarioService.ts
 import Usuario from '../models/usersModel';
 
-export const autenticarUsuario = async (email: string, senha: string) => {
+
+export const loginUser = async (username: string, senha: string) => {
   try {
-    const usuario = await Usuario.findOne({ where: { Email: email } });
+    const usuario = await Usuario.findOne({ where: { Nome: username } });
     if (usuario && usuario.Senha === senha) {
       return usuario;
     }

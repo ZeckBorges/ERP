@@ -13,3 +13,11 @@ export const login = async (req: Request, res: Response) => {
     return res.status(500).json({ message: 'Erro no servidor' });
   }
 };
+
+export const createUser = async (req: Request, res: Response) => {
+  return res.json({message: 'Usuário criado!!'})
+};
+
+export const getUsers = async (req: Request, res: Response) => {
+  return res.json({message: 'Buscando usuários!'})
+};
