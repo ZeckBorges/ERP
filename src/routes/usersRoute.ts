@@ -1,6 +1,6 @@
 // src/routes/users.ts
 
-import { getUsers, createUser } from '../controllers/users';
+import { getUsers, createUser } from '../controllers/usersController';
 
 
 export const init = (expressInstance: any, basePath: string) => {
