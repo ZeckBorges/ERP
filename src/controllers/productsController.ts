@@ -1,5 +1,12 @@
 import { Request, Response } from "express"
+import { listarProdutos } from "../services/productService"
 
 export const listProducts = async (req: Request, res: Response) => {
-    return res.json({message: 'Listagem de Produtos!'})
+    try {
+        const produtos = await listarProdutos();
+        res.json({produtos})
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao buscar dados!!', error });
+    }
+        
 }
