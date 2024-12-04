@@ -46,9 +46,9 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 
 
 // Note that you must use a SQL Server login -- Windows credentials will not work.
-const sequelize = new Sequelize('TESTE ', 'user', '1234', {
+const sequelize = new Sequelize('ResSystem', 'Ezequiel', '2468', {
     dialect: 'mssql',
-    host: 'NTB-EZEQUIEL',
+    host: 'DESKTOP-1LQ6T4F',
     port: 1433, // Default port
     dialectOptions: {
         instanceName: 'SQLEXPRESS',
@@ -75,6 +75,6 @@ const sequelize = new Sequelize('TESTE ', 'user', '1234', {
   }
 })();
 
-console.log(sequelize)
+//console.log(sequelize)
 
 export default sequelize;
