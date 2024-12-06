@@ -7,8 +7,10 @@ const port = 3000;
 app.use(express.json());
 
 init(app, '/api')
-// Usar as rotas
-//app.use('/api', routes);
+
+app.get('/', (req, res) =>{
+  res.send('api rodando!!')
+})
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
