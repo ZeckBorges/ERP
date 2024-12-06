@@ -1,9 +1,9 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 
-/*dotenv.config(); // Carrega as variáveis do arquivo .env
+dotenv.config(); // Carrega as variáveis do arquivo .env
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+const sequelize = new Sequelize(process.env.DB_NAME!, process.env.DB_USER!, process.env.DB_PASS, {
   dialect: 'mssql',
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
@@ -20,7 +20,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     min: 0,
     idle: 10000,
   },
-});*/
+});
 
 /*// Note that you must use a SQL Server login -- Windows credentials will not work.
 const sequelize = new Sequelize('ResSystem', 'Ezequiel', '2468', {
@@ -44,9 +44,9 @@ const sequelize = new Sequelize('ResSystem', 'Ezequiel', '2468', {
 
 
 // Note that you must use a SQL Server login -- Windows credentials will not work.
-const sequelize = new Sequelize('ResSystem', 'Ezequiel', '2468', {
+/*const sequelize = new Sequelize('TESTE', 'user', '1234', {
     dialect: 'mssql',
-    host: 'DESKTOP-1LQ6T4F',
+    host: 'NTB-EZEQUIEL',
     port: 1433, // Default port
     dialectOptions: {
         instanceName: 'SQLEXPRESS',
@@ -61,7 +61,7 @@ const sequelize = new Sequelize('ResSystem', 'Ezequiel', '2468', {
         min: 0,
         idle: 10000
     }
-});
+});*/
 
 
 (async () => {
