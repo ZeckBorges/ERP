@@ -8,8 +8,8 @@ app.use(express.json());
 
 init(app, '/api')
 
-app.use('/', (req, res) =>{
-  res.send('Hello World!!')
+app.get('/', (req, res) =>{
+  res.send('api rodando!!')
 })
 
 app.listen(port, () => {
