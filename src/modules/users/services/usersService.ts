@@ -28,3 +28,7 @@ export const getUserByUsername = async (username: string) => {
     throw error;
   }
 };
+
+export const listarUsuarios = async () => {
+  return await Usuario.findAll()
+};

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { loginUser } from '../services/usersService';  // Função de login do service
+import { loginUser, listarUsuarios } from '../services/usersService';  // Função de login do service
 
 export const login = async (req: Request, res: Response) => {
   try {
@@ -19,5 +19,11 @@ export const createUser = async (req: Request, res: Response) => {
 };
 
 export const getUsers = async (req: Request, res: Response) => {
-  return res.json({message: 'Buscando usuários!'})
+  try {
+    const users = await listarUsuarios();
+    res.json(users)
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar usuários!!', error });
+        console.log(error)
+  }
 };
