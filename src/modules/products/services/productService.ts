@@ -15,3 +15,7 @@ export const atualizarProduto = async (id: number, dadosAtualizados: any) => {
 export const deletarProduto = async (id: number) => {
   return await Produto.destroy({ where: { ID: id } });
 };
+
+export const getProduct = async (id: any) => {
+  return await Produto.findByPk(id)
+}

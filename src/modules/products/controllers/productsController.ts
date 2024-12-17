@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { listarProdutos } from "../services/productService"
+import { listarProdutos, getProduct } from "../services/productService"
 
 export const listProducts = async (req: Request, res: Response) => {
     try {
@@ -10,4 +10,10 @@ export const listProducts = async (req: Request, res: Response) => {
         console.log(error)
     }
         
+}
+
+export const Product = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const produto = await getProduct(id)
+    res.json(produto)
 }
